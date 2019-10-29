@@ -1,0 +1,25 @@
+
+<div class="books-list">
+  <div class="header">
+    <h1 class="title">Top books of all time</h1>
+    <div class="search">
+      <input type="text" (input)="search($event)" placeholder="Search..."/>
+    </div>
+  </div>
+  <div class="main">
+    <div class="container" *ngIf="books">
+      <div class="book-info" *ngFor="let book of filteredBooks | paginate: { itemsPerPage: itemsPerPage	, currentPage: currentPage }; let i=index;">
+        <div class="col-left">
+          <div class="title" [routerLink]="book.slug"><span>{{ ((currentPage-1)*itemsPerPage) + (i+1) }}. {{ book.title }}</span><span class="rating"> ({{book.rating}}/10)</span></div>
+          <div class="author">{{ book.author }}</div>
+          <div class="synopsis">{{ book.synopsis | slice:0:200 }}...</div>
+          <div class="upvote">
+            <button class="btn-upvote" [ngClass]="{'upvoted': book.upvoted}" (click)="upvote(i)"></button><span>Upvoted {{ book.upvotes}} times</span>
+          </div>
+        </div>
+        <div class="col-right"><img [src]="getBookCover(book.cover)" [routerLink]="book.slug"/></div>
+      </div>
+      <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+    </div>
+  </div>
+</div>

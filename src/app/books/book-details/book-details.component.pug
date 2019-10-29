@@ -1,0 +1,26 @@
+.book-details(*ngIf="book")
+	.header
+		.main
+			.title {{ book.title }}
+			.upvote
+				span Upvoted {{ book.upvotes }} times
+				button.btn-upvote([ngClass]="{'upvoted': book.upvoted}", (click)="upvote()")
+		.author {{ book.author }}
+
+	.cover
+		img([src]="getBookCover(book.cover)")
+
+	.synopsis
+		.title Synopsis
+		.content {{ book.synopsis }}
+
+	.rating Rating: {{ book.rating }}/10
+
+	.comments
+		.title Comments
+		.comment(*ngFor="let comment of comments") 
+			span.user {{ comment.user }}
+			span.content {{ comment.content }}
+		textarea#commentBox([(ngModel)]="comment", (keyup.enter)="submitComment()", placeholder="Write a comment...")
+
+

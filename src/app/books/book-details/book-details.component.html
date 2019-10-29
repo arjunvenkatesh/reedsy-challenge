@@ -1,0 +1,23 @@
+
+<div class="book-details" *ngIf="book">
+  <div class="header">
+    <div class="main">
+      <div class="title">{{ book.title }}</div>
+      <div class="upvote"><span>Upvoted {{ book.upvotes }} times</span>
+        <button class="btn-upvote" [ngClass]="{'upvoted': book.upvoted}" (click)="upvote()"></button>
+      </div>
+    </div>
+    <div class="author">{{ book.author }}</div>
+  </div>
+  <div class="cover"><img [src]="getBookCover(book.cover)"/></div>
+  <div class="synopsis">
+    <div class="title">Synopsis</div>
+    <div class="content">{{ book.synopsis }}</div>
+  </div>
+  <div class="rating">Rating: {{ book.rating }}/10</div>
+  <div class="comments">
+    <div class="title">Comments</div>
+    <div class="comment" *ngFor="let comment of comments"> <span class="user">{{ comment.user }}</span><span class="content">{{ comment.content }}</span></div>
+    <textarea id="commentBox" [(ngModel)]="comment" (keyup.enter)="submitComment()" placeholder="Write a comment..."></textarea>
+  </div>
+</div>

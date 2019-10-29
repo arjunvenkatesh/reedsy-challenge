@@ -1,0 +1,140 @@
+.books-list {
+  max-width: 768px;
+  margin: auto;
+  background-color: #fafaf3;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.25), 0 0px 8px rgba(0, 0, 0, 0.22);
+
+  .header {
+    padding: 20px;
+
+    .title {
+      color: #e4ab32;
+      margin: 0;
+      text-align: center;
+    }
+
+    .search {
+    	display: flex;
+    	justify-content: flex-end;
+
+    	input {
+    		padding: 5px 10px;
+    		border: none;
+    		border-radius: 5px;
+	    	outline: none;
+	  		box-shadow: 0 0px 0px rgba(0, 0, 0, 0.25), 0 0px 8px rgba(0, 0, 0, 0.22);
+    	}
+    }
+  }
+
+  .main {
+    .container {
+      .book-info {
+        padding: 30px;
+        display: flex;
+        align-items: center;
+
+        &:nth-child(odd) {
+          background-color: white;
+        }
+
+        &:nth-child(even) {
+          background-color: #fafaf3;
+        }
+
+        .col-left {
+          margin-right: 30px;
+
+          .title {
+            margin: 0 0 20px 0;
+            font-size: 18px;
+            color: #ac6c00;
+            font-weight: 600;
+            cursor: pointer;
+
+            .rating {
+              font-size: 13px;
+              color: black;
+              font-weight: 300;
+            }
+          }
+
+          .author {
+            margin-bottom: 30px;
+            font-size: 13px;
+            font-style: italic;
+            font-weight: 300;
+          }
+
+          .synopsis {
+            margin-bottom: 30px;
+            font-size: 14px;
+          }
+
+          .upvote {
+            .btn-upvote {
+              width: 80px;
+              background-color: #e4ab32;
+              padding: 8px 12px;
+              border-radius: 8px;
+              border-color: #e4ab32;
+              font-size: 14px;
+              color: white;
+              letter-spacing: 0.7px;
+              margin-right: 20px;
+              cursor: pointer;
+              outline: none;
+
+              &:after {
+                content: 'Upvote'
+              }
+
+              &.upvoted {
+                background-color: #ffffff;
+                color: #e4ab32;
+                border: 1px solid #e4ab32;
+
+                &:after {
+                  content: 'Upvoted'
+                }
+              }
+            }
+
+            span {
+              font-size: 13px;
+              font-weight: 300;
+            }
+          }
+        }
+
+        .col-right {
+          img {
+            height: 180px;
+            width: 120px;
+            border-radius: 10px;
+            cursor: pointer;
+          }
+        }
+      }
+
+      ::ng-deep .ngx-pagination {
+        padding: 20px;
+        text-align: center;
+        margin: 0;
+
+        li {
+          border-radius: 6px;
+          
+          &.current {
+          	background-color: #e4ab32;
+          }
+
+          a {
+          	border-radius: 6px;
+          	outline: none;
+          }
+        }
+      }
+    }
+  }
+}

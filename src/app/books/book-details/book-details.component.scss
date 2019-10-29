@@ -1,0 +1,131 @@
+.book-details {
+  max-width: 768px;
+  margin: auto;
+  background-color: white;
+  padding: 30px;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.25), 0 0px 8px rgba(0, 0, 0, 0.22);
+
+  .header {
+    margin-bottom: 30px;
+
+    .main {
+      display: flex;
+      align-items: center;
+      margin-bottom: 4px;
+
+      .title {
+        font-size: 30px;
+        font-weight: 600;
+        color: #ac6c00;
+      }
+
+      .upvote {
+        margin-left: auto;
+
+        span {
+          font-size: 13px;
+          font-weight: 300;
+          letter-spacing: 0.5px;
+          margin-right: 20px;
+        }
+
+        .btn-upvote {
+          width: 80px;
+          background-color: #e4ab32;
+          padding: 8px 12px;
+          border-radius: 8px;
+          border-color: #e4ab32;
+          font-size: 14px;
+          color: white;
+          letter-spacing: 0.7px;
+          margin-right: 20px;
+          cursor: pointer;
+          outline: none;
+
+          &:after {
+            content: 'Upvote'
+          }
+
+          &.upvoted {
+            background-color: #ffffff;
+            color: #e4ab32;
+            border: 1px solid #e4ab32;
+
+            &:after {
+              content: 'Upvoted'
+            }
+          }
+        }
+      }
+    }
+
+    .author {
+      font-size: 14px;
+      font-weight: 300;
+      font-style: italic;
+    }
+  }
+
+  .cover {
+    display: flex;
+    margin-bottom: 30px;
+
+    img {
+      height: 500px;
+      width: 350px;
+      border-radius: 10px;
+      margin: auto;
+    }
+  }
+
+  .synopsis {
+    margin-bottom: 30px;
+
+    .title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .content {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 18px;
+    }
+  }
+
+  .rating {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+
+  .comments {
+    .title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .comment {
+      font-size: 15px;
+      margin-bottom: 10px;
+
+      .user {
+        margin-right: 5px;
+        color: #e4ab32;
+        font-weight: 600;
+      }
+
+      .content {}
+    }
+
+    textarea {
+      width: 100%;
+      padding: 5px;
+      border-radius: 5px;
+      height: 30px;
+      font-size: 12px;
+    }
+  }
+}

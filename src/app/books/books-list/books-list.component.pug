@@ -1,0 +1,22 @@
+.books-list
+	.header
+		h1.title Top books of all time
+		.search
+			input(type="text", (input)="search($event)", placeholder="Search...")
+	.main
+		.container(*ngIf="books")
+			.book-info(*ngFor="let book of filteredBooks | paginate: { itemsPerPage: itemsPerPage	, currentPage: currentPage }; let i=index;")
+				.col-left
+					.title([routerLink]="book.slug")
+						span {{ ((currentPage-1)*itemsPerPage) + (i+1) }}. {{ book.title }}
+						span.rating  ({{book.rating}}/10)
+					.author {{ book.author }}
+					.synopsis {{ book.synopsis | slice:0:200 }}...
+					.upvote
+						button.btn-upvote([ngClass]="{'upvoted': book.upvoted}", (click)="upvote(i)")
+						span Upvoted {{ book.upvotes}} times
+
+				.col-right
+					img([src]="getBookCover(book.cover)", [routerLink]="book.slug")
+
+			pagination-controls((pageChange)="currentPage = $event")
