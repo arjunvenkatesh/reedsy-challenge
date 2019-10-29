@@ -1,0 +1,18 @@
+Tell us about one of your commercial projects with Vue.js or AngularJS.
+
+Web app (Angular 6) -
+https://app.syncbiz.io/
+
+Credentials -
+email - phaneendra.hegde@gmail.com
+password - q1w2e3r4
+
+Please feel free to explore the web app using the credentials provides
+
+Brief -
+SyncBiz is a FinTech CRM Dashboard for Financial Consultants mainly targeted towards the SE Asia market.
+Using the web app, a Financial Consultant (FC) can -
+- manage list of clients along with their personal, financial, medical information.
+- create a profile of the FC to showcase it to potential clients.
+- manage leads, opportunities, activties, etc.
+
