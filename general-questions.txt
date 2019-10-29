@@ -1,0 +1,25 @@
+2.1. What kind of front end projects do you enjoy working on? Why?
+-- I like working on CRM Dashboards which has complex/contextual forms along with intensive analytics and visualizations. I feel it's quite challenging to create highly dynamic UIs as it requires good problem solving skills.
+   
+2.2. Which are your favorite features of HTML5? How have you used them before?
+-- My favourite features are :
+  - <video> :: Why - easy to stream videos with playback controls. I created a video shoppable app via tagging.
+  - 'pattern' attribute in <input> :: Why - easy to verify if user input matches a predefined pattern for fields like email, phone number, etc.
+  - LocalStorage: Why - easy to store user's profile/preferences after login to be accessed later in the app.
+
+2.3. Explain the difference between creating a DOM element setting innerHTML and using createElement.
+-- Advantages of using createElement vs setting innerHTML are -
+1) Preserves existing references to DOM elements when appending elements - When you append/modify innerHTML, all the DOM nodes inside that element have to be re-parsed and recreated. If you saved any references to nodes, they will be essentially useless, because they aren't the ones that show up anymore.
+2) Preserves event handlers attached to any DOM elements - Setting innerHTML will not automatically reattach event handlers to the new elements it creates, so you would have to keep track of them yourself and add them manually. Event delegation can eliminate this problem in some cases.
+
+In general, innerHTML is slower than appendChild(), because with innerHTML, the browser need to parse the input string, create objects for elements/text, then add them into the DOM. appendChild() on the other hand, only accept objects. So the browser doesn't need to do any string parsing and object creation.
+However, calling appendChild() multiple times in order to add multiple objects can be slower if the whole process can be done using a single assignment to innerHTML. This is because the JavaScript engine needs time to parse the script itself, and the code which does the actual work for appendChild() and innerHTML are native code which runs much faster than script code.
+
+2.4. Compare two-way data binding vs one-way data flow.
+-- Two way data binding (e.g. Angular)  means that UI fields are bound to model data dynamically such that when a UI field changes, the model data changes with it and vice-versa.
+One way data flow (e.g. React) means that the model is the single source of truth. Changes in the UI trigger messages that signal user intent to the model (or “store” in React). Only the model has the access to change the app’s state. The effect is that data always flows in a single direction, which makes it easier to understand.
+
+One way data flows are deterministic, whereas two-way binding can cause side-effects which are harder to follow and understand.
+
+2.5. Why is asynchronous programming important in JavaScript?
+-- Asynchronous programming enables code to run in a non-blocking manner. When there's code which takes some time to finish (e.g. accessing an API from a remote server), it executes in the background allowing other parts of the code to execute in parallel.
