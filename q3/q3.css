@@ -1,0 +1,269 @@
+body {
+  background-color: #fafaf3;
+  font-family: sans-serif;
+  margin: 0;
+}
+body .top-actions {
+  max-width: 1024px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+body .top-actions .container {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  margin: 0 30px;
+}
+body .top-actions .container .top-logo {
+  width: 200px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background: #cbcccd;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+body .top-actions .container .top-menu {
+  margin-left: auto;
+}
+body .top-actions .container .top-menu ul {
+  display: flex;
+  list-style: none;
+}
+body .top-actions .container .top-menu ul li {
+  margin: 0 5px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+body .top-actions .container .top-menu ul li.active {
+  background-color: #ebc300;
+  color: white;
+}
+body .main {
+  max-width: 1024px;
+  margin: auto;
+  background-color: white;
+  border-radius: 10px;
+  padding-bottom: 50px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+body .main .container h1 {
+  margin: 0;
+  padding: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+body .main .container .featured-book {
+  position: relative;
+  display: flex;
+  background-color: #fafaf3;
+  padding: 30px;
+}
+body .main .container .featured-book .recommended {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #ebc300;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 0 0 0 10px;
+}
+body .main .container .featured-book img {
+  width: 260px;
+  height: 400px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+body .main .container .featured-book .book-info .title {
+  margin: 5px 0;
+}
+body .main .container .featured-book .book-info .author {
+  font-size: 14px;
+}
+body .main .container .featured-book .book-info .synopsis {
+  line-height: 20px;
+}
+body .main .container .top-voted {
+  background-color: white;
+  padding: 50px 30px 30px 30px;
+}
+body .main .container .top-voted h2 {
+  margin: 0 0 30px 0;
+  letter-spacing: 1px;
+}
+body .main .container .top-voted .books-list {
+  display: flex;
+  justify-content: space-between;
+}
+body .main .container .top-voted .books-list .book {
+  width: 32%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: #fafaf3;
+  border-radius: 10px;
+  padding: 15px;
+}
+body .main .container .top-voted .books-list .book .position {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 5px 10px;
+  border: 2px solid #ebc300;
+  border-radius: 100%;
+  color: #ebc300;
+}
+body .main .container .top-voted .books-list .book img {
+  width: 133px;
+  height: 200px;
+  margin: 0 auto 20px auto;
+  border-radius: 10px;
+}
+body .main .container .top-voted .books-list .book .book-info .title {
+  font-size: 16px;
+  margin: 0 0 5px 0;
+  letter-spacing: 0.5px;
+}
+body .main .container .top-voted .books-list .book .book-info .author {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+body .main .container .top-voted .books-list .book .book-info .synopsis {
+  font-size: 14px;
+  line-height: 18px;
+}
+body footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+body footer .container {
+  background: #292929;
+  padding: 10px 20px;
+}
+body footer .container ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin: 0;
+}
+body footer .container ul li {
+  color: white;
+  padding: 5px 10px;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  body .top-actions .container {
+    margin: 0 15px;
+  }
+  body .main .container h1 {
+    padding: 15px;
+    font-size: 24px;
+  }
+  body .main .container .featured-book {
+    padding: 20px 15px;
+  }
+  body .main .container .featured-book img {
+    width: 225px;
+    height: 340px;
+  }
+  body .main .container .featured-book .book-info .synopsis {
+    font-size: 13px;
+    line-height: 15px;
+  }
+  body .main .container .top-voted {
+    padding: 20px 15px;
+  }
+  body .main .container .top-voted .books-list .book {
+    padding: 10px 5px;
+  }
+  body .main .container .top-voted .books-list .book .position {
+    font-size: 13px;
+    padding: 4px 8px;
+  }
+  body .main .container .top-voted .books-list .book .book-info .title {
+    font-size: 14px;
+  }
+  body .main .container .top-voted .books-list .book .book-info .synopsis {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  body .top-actions .container {
+    display: block;
+    margin: 0 10px;
+  }
+  body .top-actions .container .top-logo {
+    margin: auto;
+  }
+  body .top-actions .container .top-menu ul {
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  body .top-actions .container .top-menu ul li {
+    padding: 4px;
+    margin: 4px;
+    font-size: 14px;
+  }
+  body .main .container h1 {
+    font-size: 20px;
+    padding: 15px;
+  }
+  body .main .container .featured-book {
+    flex-direction: column;
+  }
+  body .main .container .featured-book .recommended {
+    font-size: 12px;
+  }
+  body .main .container .featured-book img {
+    margin: auto;
+    width: 130px;
+    height: 200px;
+  }
+  body .main .container .featured-book .book-info .title {
+    font-size: 18px;
+  }
+  body .main .container .featured-book .book-info .synopsis {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  body .main .container .top-voted {
+    padding: 30px 10px;
+  }
+  body .main .container .top-voted h2 {
+    margin: 0 0 15px 0;
+    font-size: 20px;
+  }
+  body .main .container .top-voted .books-list {
+    display: block;
+  }
+  body .main .container .top-voted .books-list .book {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  body .main .container .top-voted .books-list .book .book-info .synopsis {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  body footer .container {
+    padding: 5px 10px;
+  }
+  body footer .container ul {
+    padding: 0;
+  }
+  body footer .container ul li {
+    padding: 5px 10px;
+    margin: 5px 10px;
+    font-size: 14px;
+  }
+}
+
+/*# sourceMappingURL=q3.css.map */
